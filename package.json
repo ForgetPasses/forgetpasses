@@ -1,0 +1,28 @@
+{
+  "name": "forgetpasses",
+  "version": "1.0.0",
+  "description": "NPM Package for the ForgetPasses Authentication System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ForgetPasses/forgetpasses.git"
+  },
+  "keywords": [
+    "forgetpasses"
+  ],
+  "author": "ForgetPasses",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ForgetPasses/forgetpasses/issues"
+  },
+  "homepage": "https://github.com/ForgetPasses/forgetpasses#readme",
+  "dependencies": {
+    "axios": "^1.2.2",
+    "cookie-parser": "^1.4.6",
+    "ipware": "^2.0.0",
+    "uuid": "^9.0.0"
+  }
+}
