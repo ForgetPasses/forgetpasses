@@ -20,6 +20,33 @@ class forgetpasses {
         });
       })
     }
+    async getUserData(req){
+      if(await this.getFirewallStatus(req)){
+        var login_token = req.cookies.fp_login_token;
+        const data = await this.cS(login_token);
+        if(data.status===true){
+          const user_data = await this.gUD(login_token);
+          console.log(user_data)
+          return user_data
+        }
+      }else{
+        return "Please cool down"
+      }
+    }
+    gUD(login_token){
+      return new Promise(resolve=>{
+        axios.post('https://forgetpasses.com:8443/api/user/getData', {
+          token: this.token,
+          user_token: login_token,
+        })
+        .then(function (response) {
+          resolve(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      })
+    }
     fW(ip_address){
       return new Promise(resolve => {
         axios.post('https://forgetpasses.com:8443/api/firewall', {
