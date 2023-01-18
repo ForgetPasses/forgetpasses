@@ -34,7 +34,7 @@ class forgetpasses {
     }
     gUD(login_token){
       return new Promise(resolve=>{
-        axios.post('https://forgetpasses.com:8443/api/user/getData', {
+        axios.post('https://forgetpasses.com:8443/api/user/getUserData', {
           token: this.token,
           user_token: login_token,
         })
