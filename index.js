@@ -26,7 +26,6 @@ class forgetpasses {
         const data = await this.cS(login_token);
         if(data.status===true){
           const user_data = await this.gUD(login_token);
-          console.log(user_data)
           return user_data
         }
       }else{
